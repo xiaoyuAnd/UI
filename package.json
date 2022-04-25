@@ -1,0 +1,22 @@
+{
+  "name": "ui-vue",
+  "version": "1.0.0",
+  "description": "ui",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaoyuAnd/UI.git"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "author": "zhang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xiaoyuAnd/UI/issues"
+  },
+  "homepage": "https://github.com/xiaoyuAnd/UI#readme"
+}
