@@ -1,5 +1,5 @@
 <template>
-  <svg v-if="icon" class="icon" aria-hidden="true">
+  <svg  class="r-icon" aria-hidden="true">
     <use :xlink:href="`#i-${icon}`"></use>
   </svg>
 </template>
@@ -12,5 +12,11 @@ export default {
 </script>
 
 <style scoped>
-
+.r-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
 </style>
