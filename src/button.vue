@@ -1,6 +1,7 @@
 <template>
-  <button class="r-button" :class="{[`icon-${iconPosition}`]:true}">
-    <r-icon :icon="icon" v-if="icon"></r-icon>
+  <button class="r-button" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('click')">
+    <r-icon :icon="icon" v-if="icon && !loading" class="icon"></r-icon>
+    <r-icon icon="loading" class="loading icon" v-if="loading"></r-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -12,9 +13,18 @@
 
 export default {
   name: "r-button",
+  data(){
+    return{
+      a:true
+    }
+  },
   // props: ['icon', 'iconPosition']
   props:{
     icon:{},
+    loading:{
+      type:Boolean,
+      default: false
+    },
     iconPosition:{
       type: String,
       required: false,
@@ -29,6 +39,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@keyframes spin {
+  0%{transform: rotate(0deg)}
+  100%{transform: rotate(360deg)}
+}
 .r-button {
   font-size: var(--font-size);
   height: var(--button-height);
@@ -73,6 +87,9 @@ export default {
       padding-right: .1em
     }
   }
+}
+.loading{
+  animation: spin 1.5s infinite linear;
 }
 
 </style>
