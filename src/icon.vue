@@ -11,9 +11,6 @@ export default {
 }
 </script>
 
-<style scoped>
-.r-icon {
-  width: 1em;
-  height: 1em;
-}
+<style scoped lang="scss">
+
 </style>
